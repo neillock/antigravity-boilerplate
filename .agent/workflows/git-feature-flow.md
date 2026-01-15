@@ -54,5 +54,8 @@ Use this workflow to manage code changes, distinct features, and prevent "drift"
    - **Strict Rule**: **DO NOT** merge to `main` locally.
    - **Action**:
      1. Push the final changes: `git push origin <branch-name>`
-     2. Present the PR Title and Description to the user.
-     3. Instruct the User: "Please review and merge the Pull Request at [Repository URL]."
+     2. **Generate PR Content**: Present the PR Title and full Description (in markdown code block) in the chat message.
+     3. **Manual Step (Until `gh` CLI is authenticated)**: Instruct the user:
+        - "Please create the PR at [Repository URL/pull/new/branch-name]"
+        - "Copy the Title and Description I provided above into the GitHub PR form."
+     4. Once `gh auth login` is configured, use `gh pr create --title "..." --body "..."` to automate this.
