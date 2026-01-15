@@ -98,6 +98,19 @@ This skill defines the **mandatory** standards, conventions, and workflows for a
     | Example: Chat   | gemini-3.0-pro | `server/services/chat.ts:45` | User conversation handling | $0.00025 input / $0.0005 output |
   - **Update Trigger**: Every time you add, change, or remove an AI model call, update this file.
 
-## 11. Workflow Triggers
+## 11. API Documentation (Backend)
+- **Requirement**: Every backend API MUST have Swagger/OpenAPI documentation.
+- **Implementation**:
+  - Use `swagger-jsdoc` + `swagger-ui-express` (Node/Express) or equivalent for your stack.
+  - Document ALL routes with: method, path, description, request body schema, response schema, and auth requirements.
+- **Security Documentation**: Each endpoint must specify:
+  - Authentication method (JWT, API Key, OAuth, Public)
+  - Required permissions/roles
+  - Rate limiting (if applicable)
+- **Location**: Serve docs at `/api/docs` or `/swagger`.
+- **Maintenance**: Update Swagger docs on every API change.
+
+## 12. Workflow Triggers
 - **Backend Logic Detection**: If writing DB/Secret logic in a Client Component -> STOP. Suggest decoupling.
 - **Cross-Stack Verification**: If editing Client AND Server in one go -> STOP. Ask for confirmation.
+
