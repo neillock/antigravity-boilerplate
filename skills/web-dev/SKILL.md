@@ -91,7 +91,12 @@ This skill defines the **mandatory** standards, conventions, and workflows for a
 - **Database**: Plan for schema migrations. Don't break prod DB.
 - **AI Models**: 
   - Priority: Gemini 3.0 > 2.5.
-  - Docs: Maintain `AI_MODELS.md` with cost checks.
+  - **Documentation**: You MUST create and maintain `AI_MODELS.md` in the project root.
+  - **Required Content**:
+    | Service/Feature | Model Name | File Location | Purpose | Est. Cost (per 1k tokens) |
+    |-----------------|------------|---------------|---------|---------------------------|
+    | Example: Chat   | gemini-3.0-pro | `server/services/chat.ts:45` | User conversation handling | $0.00025 input / $0.0005 output |
+  - **Update Trigger**: Every time you add, change, or remove an AI model call, update this file.
 
 ## 11. Workflow Triggers
 - **Backend Logic Detection**: If writing DB/Secret logic in a Client Component -> STOP. Suggest decoupling.
