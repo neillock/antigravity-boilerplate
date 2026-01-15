@@ -25,12 +25,21 @@ Follow this questionnaire to determine the project's architectural constraints.
    - IF **No**:
      - Use the default artifact location (e.g., `~/.gemini/antigravity/brain/<conversation-id>/`).
 
-3. **Deployment Target**
-   - ASK: "Is this application intended for local development/testing only, or do you plan to push it to production?"
-   - IF **Local**: Continue to Step 4.
-   - IF **Production**: Continue to Step 4.
+3. **Application Type**
+   - ASK: "What type of application are you building?"
+   - **Options**:
+     - **SaaS** → Load `skills/saas-landing/SKILL.md` for landing pages. Follow discovery questions before design.
+     - **E-commerce** → (Future: Load e-commerce skill)
+     - **Portfolio/Personal** → (Future: Load portfolio skill)
+     - **Internal Tool** → Skip landing page design, focus on functionality.
+     - **Other** → Proceed with general web-dev skill.
 
-4. **Architecture & Decoupling**
+4. **Deployment Target**
+   - ASK: "Is this application intended for local development/testing only, or do you plan to push it to production?"
+   - IF **Local**: Continue to Step 5.
+   - IF **Production**: Continue to Step 5.
+
+5. **Architecture & Decoupling**
    - ASK: "Do you want to decouple the backend and frontend application logic?"
      - Context: "Decoupling separates the UI (React) from the business logic/API key handling (Node/Express/Functions). This is recommended for security and scalability."
    - IF **Yes**:
@@ -39,20 +48,20 @@ Follow this questionnaire to determine the project's architectural constraints.
    - IF **No**:
      - Plan for an integrated structure (e.g., standard SPA or Next.js with API routes if applicable).
 
-5. **Development Methodology**
+6. **Development Methodology**
    - ASK: "Do you want to follow a Test Driven Development (TDD) approach?"
    - IF **Yes**:
      - The project will require strict "Test First" workflows (Red-Green-Refactor).
    - IF **No**:
      - Standard development (Write code -> Verify).
 
-6. **Data Requirements (Production Only)**
-   - IF (From Step 3 was **Local**): Skip to End (unless user explicitly wants to treat local like prod).
+7. **Data Requirements (Production Only)**
+   - IF (From Step 4 was **Local**): Skip to End (unless user explicitly wants to treat local like prod).
    - ASK: "Does this application require persistent data storage?"
    - IF **No**: Proceed with stateless architecture (e.g., static site, simple container).
-   - IF **Yes**: Continue to Step 7.
+   - IF **Yes**: Continue to Step 8.
 
-7. **Cloud Service Selection (Production + Data)**
+8. **Cloud Service Selection (Production + Data)**
    - ASK: "Which cloud service do you prefer for data storage?"
      - Options to suggest:
        - **Firebase Realtime Database**: For low-latency syncing.
