@@ -39,14 +39,23 @@ Use this workflow to manage code changes, distinct features, and prevent "drift"
    - **Push**: `git push origin <branch-name>` (if remote exists).
 
 4. **Feature Completion & PR Documentation**
-   - **Pre-Merge Requirement**: Before asking the user to review the final feature, you MUST generate a Pull Request Description.
-   - **Validation**: Ensure the PR Description contains:
-     - **Feature Changes**: What did you build?
+   - **Pre-Merge Requirement**: Before asking the user to review the final feature, you MUST generate a Pull Request summary.
+   - **PR Title**: 
+     - Format: `[Type]: Brief description` (e.g., `feat: Add user authentication`, `fix: Resolve login redirect bug`)
+     - Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
+   - **PR Description**: Must contain:
+     - **Summary**: 1-2 sentences explaining what this PR does.
+     - **Feature Changes**: What did you build or fix?
      - **Architectural Changes**: Did you change the DB schema, file structure, or add dependencies?
      - **Visuals (Frontend Only)**:
-       - **Requirements**: You MUST include Screenshots and/or Video recordings of the UI changes.
+       - **Requirements**: You MUST include Screenshots and/or Video recordings of UI changes.
        - **Action**: Use the `browser` tool to capture these if not already available.
+     - **Testing**: How was this verified? (e.g., "Ran `npm test`", "Manually tested in browser")
    - **Strict Rule**: **DO NOT** merge to `main` locally.
    - **Action**:
      1. Push the final changes: `git push origin <branch-name>`
-     2. Instruct the User: "Please review and merge the Pull Request at [Repository URL]."
+     2. **Generate PR Content**: Present the PR Title and full Description (in markdown code block) in the chat message.
+     3. **Manual Step (Until `gh` CLI is authenticated)**: Instruct the user:
+        - "Please create the PR at [Repository URL/pull/new/branch-name]"
+        - "Copy the Title and Description I provided above into the GitHub PR form."
+     4. Once `gh auth login` is configured, use `gh pr create --title "..." --body "..."` to automate this.
