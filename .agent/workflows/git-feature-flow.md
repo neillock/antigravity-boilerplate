@@ -39,13 +39,14 @@ Use this workflow to manage code changes, distinct features, and prevent "drift"
    - **Push**: `git push origin <branch-name>` (if remote exists).
 
 4. **Feature Completion & PR Documentation**
-   - **Pre-Merge Requirement**: Before merging or asking the user to review the final feature, you MUST generate a Pull Request Description.
+   - **Pre-Merge Requirement**: Before asking the user to review the final feature, you MUST generate a Pull Request Description.
    - **Validation**: Ensure the PR Description contains:
      - **Feature Changes**: What did you build?
      - **Architectural Changes**: Did you change the DB schema, file structure, or add dependencies?
      - **Visuals (Frontend Only)**:
        - **Requirements**: You MUST include Screenshots and/or Video recordings of the UI changes.
        - **Action**: Use the `browser` tool to capture these if not already available.
-   - **Action**: Present this summary to the user for approval before merging to `main`.
-     - Merge command: `git checkout main && git merge <feature-branch>` (or propose PR link).
-     - Cleanup: `git branch -d <feature-branch>`.
+   - **Strict Rule**: **DO NOT** merge to `main` locally.
+   - **Action**:
+     1. Push the final changes: `git push origin <branch-name>`
+     2. Instruct the User: "Please review and merge the Pull Request at [Repository URL]."
