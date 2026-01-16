@@ -108,7 +108,7 @@ View the agent's capabilities in action through these recorded demos:
 
 ### E-commerce Polish
 Demonstrating high-conversion storefront engineering, mobile-responsive layouts, and localized UI.
-![E-commerce Demo](file:///Users/nwl/antigravity/antig-v2/samples/ecom/ecom.mp4)
+[Watch the E-commerce Demo on YouTube](https://youtube.com/shorts/jxaH_fzWy7k?feature=share)
 
 ---
 
