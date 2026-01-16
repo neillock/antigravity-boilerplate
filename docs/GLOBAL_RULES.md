@@ -32,3 +32,7 @@ These rules apply to **ALL** workspaces and conversations.
   - **Purpose**: Why this model is used
   - **Estimated Cost**: Per 1k tokens input/output
 - **Update Trigger**: Update `AI_MODELS.md` on EVERY commit that adds, changes, or removes AI model usage.
+
+## 6. Mandatory Project Documentation
+- **README.md**: Every project MUST include a `README.md` in the root with a "Getting Started" section.
+- **Content**: This section must explain how to set up environment variables, install dependencies, and run the application locally.

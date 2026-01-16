@@ -42,9 +42,9 @@ Follow this questionnaire to determine the project's architectural constraints.
      - **Other** → Proceed with general web-dev skill.
 
 5. **Deployment Target**
-   - ASK: "Is this application intended for local development/testing only, or do you plan to push it to production?"
+   - ASK: "Is this application intended for local development/testing only, or do you plan to push it to production (EXPERIMENTAL)?"
    - IF **Local**: Continue to Step 5.
-   - IF **Production**: Continue to Step 5.
+   - IF **Production (EXPERIMENTAL)**: Continue to Step 5.
 
 5. **Architecture & Decoupling**
    - ASK: "Do you want to decouple the backend and frontend application logic?"
@@ -83,3 +83,8 @@ Follow this questionnaire to determine the project's architectural constraints.
        - **Cloud SQL**: For relational data (Postgres/MySQL).
        - **Other**: User defined.
    - ACTION: Record the choice and configure the project accordingly (e.g., generate `firebase.json` or Cloud SQL connection logic).
+
+10. **README Configuration**
+    - ACTION: Create or update the `README.md` file in the project root.
+    - MANDATORY: Include "Getting Started" instructions (setup, environment variables, dependencies, and local development commands).
+    - REFERENCE: See `skills/web-dev/SKILL.md` (Section 14) for the documentation standard.

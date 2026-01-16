@@ -84,7 +84,7 @@ This skill defines the **mandatory** standards, conventions, and workflows for a
 - **TDD Requirement** (If active): Red -> Green -> Refactor.
 - **Linting**: No `eslint-disable`. Fix errors immediately.
 
-## 10. Production & AI
+## 10. Production (EXPERIMENTAL) & AI
 - **Environment**: 
   - **Review**: NEVER hardcode API URLs. Use `NEXT_PUBLIC_API_URL` etc.
   - **Config**: Maintain `.env.example`.
@@ -118,4 +118,14 @@ This skill defines the **mandatory** standards, conventions, and workflows for a
 - **No Dead Ends**: Every link (`<a>` tag or router navigation) MUST point to a functional destination. 404s are unacceptable.
 - **Verification**: Always verify link targets during implementation and testing. For internal links, ensure the route exists. For external links, ensure the URL is valid.
 - **Clarification**: If the destination of a link is unclear or not yet implemented, **ASK THE USER** for instructions before proceeding. Do not use placeholder links (e.g., `#`) in production-ready code without explicit approval.
+
+## 14. Project Documentation (README.md)
+- **Requirement**: Every project MUST have a `README.md` file in the root directory.
+- **Essential Content**: The README must include a "Getting Started" or "Setup" section that explains:
+  - **Prerequisites**: Required tools (e.g., Node.js version, npm/yarn).
+  - **Environment Variables**: List of required variables (referencing `.env.example`).
+  - **Installation**: Commands to install dependencies (e.g., `npm install`).
+  - **Development**: Commands to run the app locally (e.g., `npm run dev`).
+  - **Testing**: Commands to run tests (e.g., `npm test`).
+  - **Architecture**: Brief overview of the project structure and key components.
 
