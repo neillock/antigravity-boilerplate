@@ -2,6 +2,11 @@
 
 This repository contains the custom **Skills** and **Workflows** used by the Antigravity agent to enforce development standards, security protocols, and operational best practices.
 
+> [!TIP]
+> **First Step**: To experiment with these rules, head into Antigravity and ask the agent to initialize an app with this boilerplate:
+> `init app from it https://github.com/neillock/antigravity-boilerplate`
+> and follow instructions through.
+
 ## 📂 Repository Structure
 
 ```
@@ -10,11 +15,11 @@ This repository contains the custom **Skills** and **Workflows** used by the Ant
 │   └── git-feature-flow.md # Git branching and PR workflow
 ├── docs/
 │   └── GLOBAL_RULES.md     # Versioned copy of global agent rules
-└── skills/                 # Knowledge bases for technical tasks
-    ├── web-dev/            # Web development standards
-    │   └── SKILL.md
-    └── saas-landing/       # SaaS landing page specifications
-        └── SKILL.md
+├── skills/                 # Knowledge bases for technical tasks
+│   ├── web-dev/            # Web development standards
+│   └── saas-landing/       # SaaS landing page specifications
+├── template/               # Reusable boilerplate (NextAuth, Middleware, API Docs)
+└── AI_MODELS.md            # [REQUIRED] Audit log of AI model usage (Gemini, etc.)
 ```
 
 ---
@@ -30,10 +35,11 @@ Standardized questionnaire for starting new projects:
 | 2 | **Locale Discovery** - Language, Currency, and Timezone? |
 | 3 | **Artifact Storage** - Store logs in a `logs/` folder? |
 | 4 | **Application Type** - SaaS, E-commerce, Portfolio, Blog, Corporate? |
-| 5 | **Deployment Target** - Local or Production? |
+| 5 | **Deployment Target** - Local or Production (EXPERIMENTAL)? |
 | 6 | **Architecture** - Decouple frontend/backend? |
 | 7 | **Methodology** - Use TDD? |
-| 8-9 | **Data & Cloud** - Storage needs and provider selection |
+| 8 | **Authentication** - Google SSO, Simple Admin, or None? |
+| 9-10 | **Data & Cloud** - Storage needs and provider selection |
 
 ### 2. Git Feature Flow (`git-feature-flow.md`)
 Enforces a disciplined Git process:
@@ -54,7 +60,7 @@ Comprehensive standards for modern web applications:
 
 #### 🔒 Security & Operations
 - **Security First**: No hardcoded secrets, API Auth required, input validation
-- **Production Readiness**: Environment variables only, schema migration planning
+- **Production Readiness (EXPERIMENTAL)**: Environment variables only, schema migration planning
 - **Local Environment**: No local Docker (native runtimes only)
 - **AI Integration**: Prioritize Gemini 3.0 > 2.5, maintain `AI_MODELS.md` with code locations and costs
 
@@ -65,14 +71,15 @@ Comprehensive standards for modern web applications:
 - **State**: Redux Toolkit (global), React Context (simple)
 
 #### 📏 Coding Standards
-- **Naming**: `kebab-case` files, `PascalCase` components
+- **Naming**: `kebab-case` files, `PascalCase` components, `UPPER_CASE` constants
 - **Style**: Tabs, strict equality (`===`), no semicolons
 - **Testing**: Jest + React Testing Library, TDD optional
+- **Link Integrity**: No dead links or 404s. External links must be verified. No placeholders like `#` in production.
 
 #### 📚 API Documentation
-- **Swagger/OpenAPI**: Required for all backend APIs
-- **Content**: Routes, schemas, auth requirements, rate limits
-- **Location**: Serve at `/api/docs` or `/swagger`
+- **Swagger/OpenAPI**: Required for all backend APIs. Serve at `/api/docs` or `/swagger`.
+- **Classification**: Every endpoint must document Auth status, Roles, and Rate Limits.
+- **Reference**: See [`template/API_ENDPOINTS.md`](file:///Users/nwl/antigravity/antig-v2/template/API_ENDPOINTS.md) for the required template.
 
 ---
 
@@ -80,14 +87,28 @@ Comprehensive standards for modern web applications:
 
 ### Specialized Design Skills
 
+> [!NOTE]
+> Currently, only **E-commerce** and **SaaS Landing** skills have reached full design polish. Other templates are in active development and may receive structural updates.
+
 | Skill | Focus | Location |
 |-------|-------|----------|
-| **E-commerce** | Conversion engineering, locale-awareness, and checkout optimization | `skills/ecommerce/` |
+| **E-commerce (POLISHED)** | Conversion engineering, locale-awareness, and checkout optimization | `skills/ecommerce/` |
+| **SaaS Landing (POLISHED)** | CRO-optimized landing page anatomy and spring animations | `skills/saas-landing/` |
 | **Portfolio** | Personal branding, visual storytelling, and outcome-driven work grids | `skills/portfolio/` |
 | **Blog** | Readability-first layout, newsletter growth, and content discovery | `skills/blog/` |
 | **Corporate** | B2B authority building, service clarity, and lead generation | `skills/corporate/` |
-| **SaaS Landing** | CRO-optimized landing page anatomy and spring animations | `skills/saas-landing/` |
 | **Authentication** | Secure Google SSO and RBAC account management | `skills/auth/` |
+| **Internal Tool** | Functionality-first design, bypassing landing page overhead | - |
+
+---
+
+## 🎥 Samples
+
+View the agent's capabilities in action through these recorded demos:
+
+### E-commerce Polish
+Demonstrating high-conversion storefront engineering, mobile-responsive layouts, and localized UI.
+![E-commerce Demo](file:///Users/nwl/antigravity/antig-v2/samples/ecom/ecom.mp4)
 
 ---
 
@@ -99,7 +120,11 @@ These rules apply across ALL workspaces:
 2. **Security First** - No key leakage, API auth, scan before commit
 3. **No Local Docker** - Native runtimes for local dev
 4. **Strict PR Policy** - Never merge to main locally
-5. **AI Model Prioritization** - Gemini 3.0 > 2.5, document all usage with costs
+5. **AI Model Prioritization** - Gemini 3.0 > 2.5
+6. **Mandatory AI Documentation** - Maintain `AI_MODELS.md` in root with:
+   - **Service/Feature**, **Model Name**, **File Location**, **Purpose**, and **Estimated Cost**.
+   - **Update Trigger**: Update on EVERY commit that changes AI usage.
+7. **Mandatory Project Documentation** - Every project MUST include a `README.md` with "Getting Started" instructions (setup, installation, and local run commands).
 
 ---
 
