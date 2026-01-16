@@ -114,3 +114,8 @@ This skill defines the **mandatory** standards, conventions, and workflows for a
 - **Backend Logic Detection**: If writing DB/Secret logic in a Client Component -> STOP. Suggest decoupling.
 - **Cross-Stack Verification**: If editing Client AND Server in one go -> STOP. Ask for confirmation.
 
+## 13. Link Integrity
+- **No Dead Ends**: Every link (`<a>` tag or router navigation) MUST point to a functional destination. 404s are unacceptable.
+- **Verification**: Always verify link targets during implementation and testing. For internal links, ensure the route exists. For external links, ensure the URL is valid.
+- **Clarification**: If the destination of a link is unclear or not yet implemented, **ASK THE USER** for instructions before proceeding. Do not use placeholder links (e.g., `#`) in production-ready code without explicit approval.
+
