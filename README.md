@@ -27,12 +27,13 @@ Standardized questionnaire for starting new projects:
 | Step | Question |
 |------|----------|
 | 1 | **GitHub Linkage** - Should this workspace be linked to GitHub? |
-| 2 | **Artifact Storage** - Store logs in a `logs/` folder? |
-| 3 | **Application Type** - SaaS, E-commerce, Portfolio, Internal Tool? |
-| 4 | **Deployment Target** - Local or Production? |
-| 5 | **Architecture** - Decouple frontend/backend? |
-| 6 | **Methodology** - Use TDD? |
-| 7-8 | **Data & Cloud** - Storage needs and provider selection |
+| 2 | **Locale Discovery** - Language, Currency, and Timezone? |
+| 3 | **Artifact Storage** - Store logs in a `logs/` folder? |
+| 4 | **Application Type** - SaaS, E-commerce, Portfolio, Blog, Corporate? |
+| 5 | **Deployment Target** - Local or Production? |
+| 6 | **Architecture** - Decouple frontend/backend? |
+| 7 | **Methodology** - Use TDD? |
+| 8-9 | **Data & Cloud** - Storage needs and provider selection |
 
 ### 2. Git Feature Flow (`git-feature-flow.md`)
 Enforces a disciplined Git process:
@@ -75,28 +76,17 @@ Comprehensive standards for modern web applications:
 
 ---
 
-### SaaS Landing Page (`skills/saas-landing/SKILL.md`)
-CRO-optimized landing page specification:
+---
 
-#### Discovery Phase (Mandatory)
-1. Company Name & What they do
-2. Visual Persona (Serious/Premium, Fun/Playful, Quirky/Bold)
-3. The 3 Big Outcomes
+### Specialized Design Skills
 
-#### Page Anatomy
-| Section | Key Elements |
-|---------|--------------|
-| **Hero** | Eyebrow text, H1 with 3 outcomes, Primary CTA + subtext, Visual, Trust bar |
-| **Social Proof** | Value heading, 3-5 outcome cards, Mini quotes, Micro-CTA |
-| **Pricing** | Toggle (Monthly/Yearly with Save %), Plan cards with audience, Tooltips, Reassurance |
-| **FAQ** | Categorized, bulleted answers, "Book a call" link, No dead ends |
-| **Final CTA** | Outcome-focused headline, Trust boosters (G2/Capterra ratings) |
-
-#### Visual & Motion
-- **Color**: 60-30-10 rule
-- **Typography**: Serif headings, Sans-serif body
-- **Spacing**: 140px+ "Luxury Padding" between sections
-- **Animation**: Spring physics, drift-and-fade scroll, magnetic button hovers
+| Skill | Focus | Location |
+|-------|-------|----------|
+| **E-commerce** | Conversion engineering, locale-awareness, and checkout optimization | `skills/ecommerce/` |
+| **Portfolio** | Personal branding, visual storytelling, and outcome-driven work grids | `skills/portfolio/` |
+| **Blog** | Readability-first layout, newsletter growth, and content discovery | `skills/blog/` |
+| **Corporate** | B2B authority building, service clarity, and lead generation | `skills/corporate/` |
+| **SaaS Landing** | CRO-optimized landing page anatomy and spring animations | `skills/saas-landing/` |
 
 ---
 
