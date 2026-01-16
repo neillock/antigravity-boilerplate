@@ -62,13 +62,20 @@ Follow this questionnaire to determine the project's architectural constraints.
    - IF **No**:
      - Standard development (Write code -> Verify).
 
-7. **Data Requirements (Production Only)**
+7. **Authentication**
+   - ASK: "How would you like to handle user authentication?"
+   - **Options**:
+     - **Simple Admin** → Database-backed username/password (for quick prototypes, not recommended for real users).
+     - **Google Authentication** → Modern, secure SSO using Google Accounts.
+     - **None** → Public application with no restricted areas.
+
+8. **Data Requirements (Production Only)**
    - IF (From Step 4 was **Local**): Skip to End (unless user explicitly wants to treat local like prod).
    - ASK: "Does this application require persistent data storage?"
    - IF **No**: Proceed with stateless architecture (e.g., static site, simple container).
-   - IF **Yes**: Continue to Step 8.
+   - IF **Yes**: Continue to Step 9.
 
-8. **Cloud Service Selection (Production + Data)**
+9. **Cloud Service Selection (Production + Data)**
    - ASK: "Which cloud service do you prefer for data storage?"
      - Options to suggest:
        - **Firebase Realtime Database**: For low-latency syncing.

@@ -87,6 +87,7 @@ Comprehensive standards for modern web applications:
 | **Blog** | Readability-first layout, newsletter growth, and content discovery | `skills/blog/` |
 | **Corporate** | B2B authority building, service clarity, and lead generation | `skills/corporate/` |
 | **SaaS Landing** | CRO-optimized landing page anatomy and spring animations | `skills/saas-landing/` |
+| **Authentication** | Secure Google SSO and RBAC account management | `skills/auth/` |
 
 ---
 
