@@ -16,7 +16,12 @@ Follow this questionnaire to determine the project's architectural constraints.
    - IF **No**:
      - Proceed without Git version control (local-only project).
 
-2. **Artifact & Log Storage**
+2. **Locale & Regional Settings**
+   - ASK: "Which **Language**, **Currency**, and **Timezone** should this project be bound to?"
+   - IF **E-commerce**: Ensure these are strictly defined to handle pricing, tax, and shipping logic.
+   - IF **Global SaaS**: Use these to set the default localization strategy.
+
+3. **Artifact & Log Storage**
    - ASK: "Do you want to store project artifacts (implementation plans, walkthroughs, logs) in a `logs/` folder within this workspace?"
    - IF **Yes**:
      - Create a `logs/` directory in the project root.
@@ -25,16 +30,18 @@ Follow this questionnaire to determine the project's architectural constraints.
    - IF **No**:
      - Use the default artifact location (e.g., `~/.gemini/antigravity/brain/<conversation-id>/`).
 
-3. **Application Type**
+4. **Application Type**
    - ASK: "What type of application are you building?"
    - **Options**:
-     - **SaaS** → Load `skills/saas-landing/SKILL.md` for landing pages. Follow discovery questions before design.
-     - **E-commerce** → (Future: Load e-commerce skill)
-     - **Portfolio/Personal** → (Future: Load portfolio skill)
+     - **SaaS** → Load `skills/saas-landing/SKILL.md` for landing pages.
+     - **E-commerce** → Load `skills/ecommerce/SKILL.md` for high-conversion storefronts.
+     - **Portfolio/Personal** → Load `skills/portfolio/SKILL.md` for creative/professional showcases.
+     - **Blog/Publishing** → Load `skills/blog/SKILL.md` for content-driven sites.
+     - **Corporate/Business** → Load `skills/corporate/SKILL.md` for authority-driven B2B sites.
      - **Internal Tool** → Skip landing page design, focus on functionality.
      - **Other** → Proceed with general web-dev skill.
 
-4. **Deployment Target**
+5. **Deployment Target**
    - ASK: "Is this application intended for local development/testing only, or do you plan to push it to production?"
    - IF **Local**: Continue to Step 5.
    - IF **Production**: Continue to Step 5.
