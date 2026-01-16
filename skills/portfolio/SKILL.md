@@ -1,88 +1,60 @@
 ---
 name: Portfolio & Personal Brand
-description: Story-driven specification for personal portfolios, CVs, and creative showcases.
+description: Story-driven specification for full portfolio journeys (Identity Home + Project Case Studies).
 ---
 
-# Portfolio Master Spec
+# Portfolio Full-Journey Master Spec
 
-**Role**: You are a Lead Creative Director and Talent Scout. You design portfolios that don't just "show work," they tell a story of competence and character that makes hiring/booking inevitable.
+**Role**: You are a Lead Creative Director and Talent Scout. You design portfolios that tell a deep story of competence and impact through structured project narratives.
 
 ---
 
 ## Phase 1: Discovery (MANDATORY)
 
-Before generating ANY portfolio page, you MUST ask:
+Before generating ANY portfolio architecture, you MUST ask:
 
 1. **Who are you?**: (e.g., Frontend Developer, Architect, Minimalist Designer)
 2. **The "North Star" Project**: One sentence describing your most impressive achievement.
-3. **Primary Goal**: (Get hired by a big tech firm, Get freelance gigs, or Build a personal brand/following)
+3. **Primary Goal**: (Get hired by a big tech firm, Get freelance gigs, or Build a personal brand)
 
 ---
 
-## Phase 2: The Anatomy Specification (NON-NEGOTIABLE)
+## Phase 2: Page Specifications
 
-### 1. The Identity Hero (The Introduction)
+### 1. The Identity Home (The Introduction)
+- **Bio-Heading**: Formula: "I help [audience] achieve [outcome] through [skillset]"
+- **Persona Shot**: Professional/lifestyle image to build human connection.
+- **Work Grid**: Large thumbnails with subtle scale-on-hover; show "Outcome Overlays" on hover.
+- **Availability Pill**: Dynamic status indicator (e.g., "Available for new projects").
+- **Signature CTA**: Direct action (e.g., "View Projects" or "Download CV").
 
-| Element | Requirement |
-|---------|-------------|
-| **Bio-Heading** | Must follow the formula: "I help [audience] achieve [outcome] through [skillset]" |
-| **Persona Shot** | A professional or lifestyle image of the creator to build human connection |
-| **Availability Pill** | Dynamic "Available for new projects" or "Current Role" status indicator |
-| **Signature CTA** | Direct action (e.g., "Download CV" or "View Projects") |
+### 2. The Project Case Study (The Deep Dive)
+- **Outcome Hero**: A large, full-width image of the project with a headline focusing on the *results* (e.g., "300% Growth for Client X").
+- **The Challenge**: 2-3 short paragraphs or bullets describing the problem being solved.
+- **The Solution / Approach**: A visual breakdown (images + text) of the methodology used.
+- **Role & Stack**: A clear sidebar or block listing your specific role and the tools used (e.g., React, Figma).
+- **Final Result / Impact**: A dedicated section for metrics, testimonials, or "lessons learned."
+- **Next Project CTA**: A "Keep Exploring" section at the bottom to prevent dead ends.
 
-### 2. The Proven Work (The Evidence)
-
-| Element | Requirement |
-|---------|-------------|
-| **Work Grid** | Large, high-impact thumbnails with subtle scale-on-hover effects |
-| **Outcome Overlays** | On hover, show the *impact* of the project (e.g., "Increased revenue by 40%") |
-| **Tech/Tool Stack** | Small icons on each project card indicating tools used (e.g., React, Figma, Python) |
-| **Case Study Peek** | A brief "the challenge/the solution" summary for at least 3 top projects |
-
-### 3. Competence & Expertise (The Muscle)
-
-| Element | Requirement |
-|---------|-------------|
-| **Skill Chart** | Visual representation of core competencies (use clean cards, not progress bars) |
-| **Toolbox** | A grid of "Tools I use daily" to ground technical competence |
-| **Recommendations** | Mini-testimonials from managers/clients with bolded "Key Praise" phrases |
-
-### 4. The Method (The "How I Work")
-
-| Element | Requirement |
-|---------|-------------|
-| **Step Diagram** | A 3-step visualization of the workflow (e.g., Research -> Build -> Optimize) |
-| **Philosophy Quote** | A single, large-font quote that defines the creator's professional ethos |
-
-### 5. Final Connection (The Bridge)
-
-| Element | Requirement |
-|---------|-------------|
-| **Magnetic CTA** | Conversational prompt (e.g., "Have a project in mind? Let's talk.") |
-| **Social Links** | High-contrast links to GitHub, LinkedIn, Dribbble, or Twitter |
-| **Footer Contact** | Fast, simple form or a one-click email link |
+### 3. Competence & Expertise (The Support)
+- **Skill Chart**: Visual grid of core competencies (use clean cards).
+- **Toolbox**: A dedicated grid of "Tools I use daily."
+- **Recommendations**: Mini-testimonials with bolded "Key Praise" phrases.
 
 ---
 
-## Visual & Motion Artistry
-
-| Element | Requirement |
-|---------|-------------|
-| **Typography** | Expressive headings (use a unique, premium font) with clean body text |
-| **Background Detail** | Add "Subtle Noise" or "Grain Texture" to backgrounds for a premium, tactile feel |
-| **Project Transitions** | Smooth "Page Slide" or "Shrink/Expand" transitions when moving between work |
-| **Micro-Animations** | Pulsing "Live" status orb for availability |
+## Phase 3: Visual & Motion Artistry
+- **Typography**: Expressive headings (premium font) with high-legibility body text.
+- **Background Texture**: Add "Subtle Noise" or "Grain" for a tactile, premium feel.
+- **Project Transitions**: Smooth "Page Slide" or "Shrink/Expand" motion between pages.
+- **Micro-Animations**: Pulsing "Live" status orb for availability.
 
 ---
 
 ## Implementation Checklist
-
-- [ ] Discovery questions answered
-- [ ] Identity hero with outcome-focused bio
-- [ ] Large-scale work grid with impact overlays
-- [ ] Skill/Tool sections with clean card design
-- [ ] Recommendation carousel with highlighted praise
-- [ ] Process diagram (3-step)
-- [ ] Final conversational CTA and social links
-- [ ] Premium typography and background texture applied
-- [ ] Availability micro-animation active
+- [ ] Discovery: Bio-heading and North Star project defined.
+- [ ] Home: Work grid with impact overlays and availability pill.
+- [ ] Case Study: Structured with Challenge, Solution, and Outcome.
+- [ ] Case Study: Includes Role/Stack and Next Project navigation.
+- [ ] Visuals: Premium typography and background texture applied.
+- [ ] Expertise: Skill cards and recommendations present.
