@@ -36,3 +36,12 @@ These rules apply to **ALL** workspaces and conversations.
 ## 6. Mandatory Project Documentation
 - **README.md**: Every project MUST include a `README.md` in the root with a "Getting Started" section.
 - **Content**: This section must explain how to set up environment variables, install dependencies, and run the application locally.
+
+## 8. Verified Frontend Rendering
+- **Proof of Work**: All UI-related tasks MUST be verified visually. You cannot claim a frontend feature is "done" based on unit tests alone.
+- **Verification Requirement**: Use the `browser` tool to confirm that the application actually renders and functions correctly in a browser. Include evidence (screenshots/recordings) in your final walkthrough or PR documentation.
+
+## 9. Proactive Consultation
+- **Don't Assume**: In the absence of detailed specs for a feature or page, STOP and ask the user for clarification.
+- **The "Would You Like" Rule**: Regularly suggest logical next steps or missing pages by asking *"Would you like a page that does...?"*
+- **Complete the Vision**: Before finishing a project, always check if the user wants additional related designs.

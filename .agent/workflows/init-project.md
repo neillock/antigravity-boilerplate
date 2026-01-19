@@ -41,6 +41,18 @@ Follow this questionnaire to determine the project's architectural constraints.
      - **Internal Tool** → Skip landing page design, focus on functionality.
      - **Other** → Proceed with general web-dev skill.
 
+4b. **Color Palette Discovery**
+   - ASK: "What **Color Palette** should we use for this project?"
+   - SUGGEST: "If you're looking for inspiration, try [Coolors.co](https://coolors.co/) to generate a palette. You can simply paste in the primary CSS palette with variable names, for example:
+     ```css
+     --molten-lava: #780000ff;
+     --brick-red: #c1121fff;
+     --papaya-whip: #fdf0d5ff;
+     --deep-space-blue: #003049ff;
+     --steel-blue: #669bbcff;
+     ```"
+   - ACTION: Record the palette and ensure `index.css` is initialized with these variables.
+
 5. **Deployment Target**
    - ASK: "Is this application intended for local development/testing only, or do you plan to push it to production (EXPERIMENTAL)?"
    - IF **Local**: Continue to Step 5.
