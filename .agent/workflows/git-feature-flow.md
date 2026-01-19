@@ -35,6 +35,7 @@ Use this workflow to manage code changes, distinct features, and prevent "drift"
      1. CHECK: "Did this feature involve adding or changing AI model usage (Gemini, etc)?"
      2. IF YES: Update `AI_MODELS.md` with the model name and estimated pricing.
    - **Frequency**: Suggest committing after every successfully verified logical step.
+   - **Visual Sanity Check**: For frontend changes, run a quick browser check to ensure no regressions in rendering before committing.
    - **Command**: `git add . && git commit -m "<descriptive message>"`
    - **Push**: `git push origin <branch-name>` (if remote exists).
 

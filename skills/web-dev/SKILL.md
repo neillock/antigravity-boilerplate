@@ -129,3 +129,18 @@ This skill defines the **mandatory** standards, conventions, and workflows for a
   - **Testing**: Commands to run tests (e.g., `npm test`).
   - **Architecture**: Brief overview of the project structure and key components.
 
+## 15. Visual Verification & Rendering
+- **Mandatory Verification**: Frontend work is NOT considered complete until it has been visually verified in a real browser environment.
+- **Browser Tool**: Use the `browser` tool to navigate to the local development environment (`npm run dev`) and capture screenshots or videos of the rendered UI.
+- **Checklist**:
+  - **Rendering**: Ensure all components render without errors or layout shifts.
+  - **Responsiveness**: Verify the UI across Mobile, Tablet, and Desktop breakpoints.
+  - **Dark Mode**: If implemented, ensure styles are correct in dark mode.
+  - **Interactivity**: Test hover states, clicks, and form submissions to ensure the UI responds as expected.
+- **Fail Proof**: If the browser tool fails to load the page or rendering is broken, you MUST identify and fix the issue before asking for user review.
+
+## 16. Interactive Content Discovery
+- **Proactive Consultation**: When building multi-level or complex websites, do not assume the content or purpose of nested pages. 
+- **Mandatory Questions**: As you build, proactively ask the user: *"Would you like a page that does [X]?"* or *"How should this nested section behave?"*
+- **Final Design Check**: At the conclusion of the primary build-out, you MUST ask the user: *"Are there any other pages you think I should design?"* to ensure no requirements were missed.
+
