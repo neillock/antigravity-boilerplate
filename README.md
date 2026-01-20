@@ -27,19 +27,15 @@ This repository contains the custom **Skills** and **Workflows** used by the Ant
 ## 🚀 Workflows
 
 ### 1. Project Initiation (`init-project.md`)
-Standardized questionnaire for starting new projects:
+Standardized phased questionnaire for starting new projects. Enforces a **Mandatory Skill Routing Gate** to ensure domain-specific standards are established early.
 
-| Step | Question |
-|------|----------|
-| 1 | **GitHub Linkage** - Should this workspace be linked to GitHub? |
-| 2 | **Locale Discovery** - Language, Currency, and Timezone? |
-| 3 | **Artifact Storage** - Store logs in a `logs/` folder? |
-| 4 | **Application Type** - SaaS, E-commerce, Portfolio, Blog, Corporate? |
-| 5 | **Deployment Target** - Local or Production (EXPERIMENTAL)? |
-| 6 | **Architecture** - Decouple frontend/backend? |
-| 7 | **Methodology** - Use TDD? |
-| 8 | **Authentication** - Google SSO, Simple Admin, or None? |
-| 9-10 | **Data & Cloud** - Storage needs and provider selection |
+| Phase | Focus | Guidance |
+|-------|-------|----------|
+| **1: Foundation** | GitHub, Locale, Artifact Storage | Loads `web-dev` skill for core principles |
+| **2: Discovery** | **Mandatory Skill Routing Gate** | **REQUIRED**: Must load and complete `SKILL.md` discovery questions for selected type (E-commerce, SaaS, etc.) before proceeding |
+| **3: Visuals** | Color Palette & Theme | Integration with `index.css` |
+| **4: Technical** | Auth, Deployment, Data | Loads `auth` skill for Google SSO; routes based on tech stack choices |
+| **5: Docs** | README & AI Audit | Enforces documentation standards |
 
 ### 2. Git Feature Flow (`git-feature-flow.md`)
 Enforces a disciplined Git process:
@@ -90,15 +86,15 @@ Comprehensive standards for modern web applications:
 > [!NOTE]
 > Currently, only **E-commerce** and **SaaS Landing** skills have reached full design polish. Other templates are in active development and may receive structural updates.
 
-| Skill | Focus | Location |
-|-------|-------|----------|
-| **E-commerce (POLISHED)** | Conversion engineering, locale-awareness, and checkout optimization | `skills/ecommerce/` |
-| **SaaS Landing (POLISHED)** | CRO-optimized landing page anatomy and spring animations | `skills/saas-landing/` |
-| **Portfolio** | Personal branding, visual storytelling, and outcome-driven work grids | `skills/portfolio/` |
-| **Blog** | Readability-first layout, newsletter growth, and content discovery | `skills/blog/` |
-| **Corporate** | B2B authority building, service clarity, and lead generation | `skills/corporate/` |
-| **Authentication** | Secure Google SSO and RBAC account management | `skills/auth/` |
-| **Internal Tool** | Functionality-first design, bypassing landing page overhead | - |
+| Skill | Focus | Location | Status |
+|-------|-------|----------|--------|
+| **E-commerce** | Conversion engineering, locale-awareness, and checkout optimization | `skills/ecommerce/` | **POLISHED** |
+| **SaaS Landing** | CRO-optimized landing page anatomy and spring animations | `skills/saas-landing/` | **POLISHED** |
+| **Auth & Accounts** | Secure Google SSO, RBAC, and account management standards | `skills/auth/` | **READY** |
+| **Portfolio** | Personal branding, visual storytelling, and outcome-driven work grids | `skills/portfolio/` | **BETA** |
+| **Blog** | Readability-first layout, newsletter growth, and content discovery | `skills/blog/` | **BETA** |
+| **Corporate** | B2B authority building, service clarity, and lead generation | `skills/corporate/` | **BETA** |
+| **Web Dev** | Core coding standards, API docs, and link integrity | `skills/web-dev/` | **CORE** |
 
 ---
 
